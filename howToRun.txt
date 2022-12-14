@@ -1,0 +1,25 @@
+1. run apache dan mysql di xampp
+2. buka phpmyadmin dan buat database baru bernama "tujuhsembilan"
+3. jalankan code di terminal dengan perintah "go run main.go"
+
+*service
+    #account
+        1. localhost:5000/api/v1/accounts (GET)
+        2. localhost:5000/api/v1/account (POST)
+            request body{
+                "name":"...",
+                "password":"..."
+            }
+    #transaction
+        1. localhost:5000/api/v1/transactions (GET)
+        2. localhost:5000/api/v1/transactions-account (GET)
+            request body{
+                "account_id":...(int)
+            }
+        3. localhost:5000/api/v1/transaction (POST)
+            request body{
+                "account_id":...(int),
+                "desc":"...",
+                "status":"..." D(debit)/C(credit),
+                "amount":...(int)
+            }
